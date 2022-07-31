@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { NavBar, SideBar, Footer, Banner } from '../components/index'
+import { NavBar, SideBar, Footer, Banner, Card } from '../components/index'
 
 function Home () {
   const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +13,9 @@ function Home () {
       <NavBar toggle={toggle} />
       <Banner />
       <h1>GAMER MARKET COLOMBIA</h1>
+      <Card />
+      <Card />
+
       <Footer />
     </>
   )

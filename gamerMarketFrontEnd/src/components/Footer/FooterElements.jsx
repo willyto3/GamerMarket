@@ -4,24 +4,27 @@ import { Icon } from '@iconify/react'
 export const FooterContainer = styled.footer`
   display: grid;
   justify-content: center;
-  border: 2px solid red;
 `
 
 export const FooterWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 200px);
   max-width: 1200px;
-  border: 2px solid blue;
+
+  @media screen and (max-width: 768px){
+    grid-template-columns: repeat(2, 200px);
+  }
 `
 export const FooterColumn = styled.div`
   height: auto;
   margin: 10px;
   padding: 10px;
-  border: 2px solid yellow;
 `
 export const FooterH1 = styled.h1`
   font-size: 14px;
   color: white;
+  margin: 0;
+  padding: 0;
 `
 
 export const ColumnUl = styled.ul`
@@ -47,7 +50,6 @@ export const ColumnIcon = styled.ul`
   margin: 0;
   padding: 0;
   align-items: center;
-  border: 2px solid yellow;
 `
 export const StyledIcon = styled(Icon)`
   color: white;

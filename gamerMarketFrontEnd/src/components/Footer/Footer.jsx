@@ -14,7 +14,7 @@ function Footer () {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterColumn>Nosotros</FooterColumn>
+        <FooterColumn>Sobre Nosotros</FooterColumn>
         <FooterColumn>
           <ColumnUl>
             <FooterH1>Productos</FooterH1>
