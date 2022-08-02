@@ -3,13 +3,14 @@ import styled, { css } from 'styled-components'
 export const FlipCard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 350px;
   height: 504px;
   transition: z-index 500ms, transform 500ms;
   z-index: 0;
   -webkit-perspective: 1000px;
   perspective: 1000px;
   transform-style: preserve-3d;
+  padding:10px 0 20px 0;
 
   &:hover {
     z-index: 1;
@@ -24,7 +25,8 @@ export const CardSide = css`
   -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border: 2px solid #0d0d0d;
+  border-radius: 30px;
+  cursor: pointer;
 `
 
 export const FlipCardInner = styled.div`
@@ -32,6 +34,8 @@ export const FlipCardInner = styled.div`
   display: flex;
   transition: transform 500ms;
   transform-style: preserve-3d;
+  box-shadow: 0 4px 15px #746cfe;
+  border-radius: 30px;
   &:hover {
     transform: rotateY(180deg);
   }
@@ -40,7 +44,6 @@ export const FlipCardInner = styled.div`
 export const FlipCardFront = styled.img`
   ${CardSide}
   z-index:0;
-  background: white;
 `
 export const FlipCardBack = styled.div`
   ${CardSide}

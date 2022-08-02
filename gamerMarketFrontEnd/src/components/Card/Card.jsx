@@ -5,14 +5,13 @@ import {
   FlipCardFront,
   FlipCardBack
 } from './CardElements'
-import aurora from '../../assets/AURORA 2.jpg'
 
-function Card () {
+function Card ({ img, alt, description }) {
   return (
     <FlipCard>
       <FlipCardInner>
-        <FlipCardFront src={aurora} alt='aurora' />
-        <FlipCardBack>texto texto</FlipCardBack>
+        <FlipCardFront src={img} alt={alt} />
+        <FlipCardBack>{description}</FlipCardBack>
       </FlipCardInner>
     </FlipCard>
   )

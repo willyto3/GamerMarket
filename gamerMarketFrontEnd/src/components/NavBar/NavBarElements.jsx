@@ -10,8 +10,8 @@ export const Nav = styled.nav`
   height: 80px;
   width: 100%;
   top: 0;
-  z-index: 10;
-  border: 1px solid black;
+  z-index: 100;
+  background-color:#242132;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -23,10 +23,9 @@ export const NavBarWrapper = styled.div`
   justify-content: space-between;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
   padding: 0 24px;
   max-width: 1400px;
-  border: 1px solid red;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
@@ -43,11 +42,9 @@ export const NavLogo = styled(LinkR)`
   cursor: pointer;
   margin-left: 24px;
   text-decoration: none;
-  border: 1px solid blue;
 `
 export const MobileIcon = styled.div`
   display: none;
-  border: 1px solid violet;
 
   @media screen and (max-width: 768px) {
     display: block;
@@ -88,7 +85,6 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
   margin-left: 24px;
   text-decoration: none;
-  border: 1px solid blue;
 
   &.active{
     border-bottom: 3px solid blue;

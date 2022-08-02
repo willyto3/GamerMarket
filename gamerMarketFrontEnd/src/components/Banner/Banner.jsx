@@ -79,10 +79,7 @@ const Banner = () => {
             <Icon icon='akar-icons:circle-chevron-left' font-size='3rem' />
           </Button>
           <Button right onClick={next}>
-            <Icon
-              icon='akar-icons:circle-chevron-right'
-              font-size='3rem'
-            />
+            <Icon icon='akar-icons:circle-chevron-right' font-size='3rem' />
           </Button>
         </Controls>
       </BannerContainer>

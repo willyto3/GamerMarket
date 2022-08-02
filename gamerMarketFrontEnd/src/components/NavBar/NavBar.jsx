@@ -11,31 +11,42 @@ import {
 } from './NavBarElements'
 
 function NavBar ({ toggle }) {
+  const Links = [
+    {
+      path: '/',
+      title: 'Inicio'
+    },
+    {
+      path: '/products',
+      title: 'Productos'
+    },
+    {
+      path: '/about-us',
+      title: 'Nosotros'
+    },
+    {
+      path: '/contact-us',
+      title: 'Contactanos'
+    }
+  ]
+
   return (
-    <>
-      <Nav>
-        <NavBarWrapper>
-          <NavLogo to='/'>GAMER MARKET</NavLogo>
-          <MobileIcon onClick={toggle}>
-            <Icon icon='ci:hamburger' />
-          </MobileIcon>
-          <NavMenu>
-            <NavItem>
-              <NavLinks to='/'>Inicio</NavLinks>
+    <Nav>
+      <NavBarWrapper>
+        <NavLogo to='/'>GAMER MARKET</NavLogo>
+        <MobileIcon onClick={toggle}>
+          <Icon icon='ci:hamburger' />
+        </MobileIcon>
+
+        <NavMenu>
+          {Links.map(({ path, title }) => (
+            <NavItem key={title}>
+              <NavLinks to={path}>{title}</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to='products'>Productos</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='about-us'>Nosotros</NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks to='contact-us'>Contactanos</NavLinks>
-            </NavItem>
-          </NavMenu>
-        </NavBarWrapper>
-      </Nav>
-    </>
+          ))}
+        </NavMenu>
+      </NavBarWrapper>
+    </Nav>
   )
 }
 

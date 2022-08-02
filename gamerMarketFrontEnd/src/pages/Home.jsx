@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { NavBar, SideBar, Footer, Banner, Card } from '../components/index'
+import { NavBar, SideBar, Footer, Banner, Products } from '../components/index'
 
 function Home () {
   const [isOpen, setIsOpen] = useState(false)
@@ -12,10 +12,7 @@ function Home () {
       <SideBar isOpen={isOpen} toggle={toggle} />
       <NavBar toggle={toggle} />
       <Banner />
-      <h1>GAMER MARKET COLOMBIA</h1>
-      <Card />
-      <Card />
-
+      <Products id='products' />
       <Footer />
     </>
   )
